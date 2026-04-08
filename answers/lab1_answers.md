@@ -8,22 +8,39 @@
 **Lớp/Nhóm:** Cntt18-02
 
 ---
+## 1. Assets
+Liệt kê ít nhất 2 assets cần bảo vệ.
 
-1. Assets
-Asset 1: Dữ liệu điểm của sinh viên
-Asset 2: Tài khoản đăng nhập của giảng viên và sinh viên
-Asset 3: Máy chủ lưu trữ hệ thống
-2. Mapping CIA
-Sự cố A → Confidentiality (Lộ thông tin điểm sinh viên)
-Sự cố B → Integrity (Điểm số bị thay đổi trái phép)
-Sự cố C → Availability (Hệ thống bị lỗi hoặc bị tấn công nên không truy cập được)
-3. Phân tích sự cố B
-Threat: Hacker hoặc người dùng cố ý sửa điểm.
-Vulnerability: Hệ thống phân quyền chưa chặt chẽ hoặc thiếu kiểm tra thay đổi dữ liệu.
-Mitigation: Áp dụng phân quyền truy cập, ghi log thay đổi dữ liệu và sao lưu dữ liệu định kỳ.
-4. Reflection
+- Asset 1: Cơ sở dữ liệu thông tin cá nhân của sinh viên và giảng viên.
+- Asset 2: Hệ thống máy chủ lưu trữ tài liệu bài giảng và bài tập.
+- Asset 3 (nếu có): Mã nguồn của ứng dụng quản lý học tập trực tuyến.
 
-Qua bài tập này em hiểu rõ hơn về mô hình CIA trong bảo mật hệ thống thông tin. Ba yếu tố Confidentiality, Integrity và Availability đều rất quan trọng trong việc bảo vệ dữ liệu. Đặc biệt với hệ thống lưu điểm sinh viên, nếu dữ liệu bị lộ hoặc bị thay đổi sẽ ảnh hưởng lớn đến tính công bằng. Vì vậy cần áp dụng các biện pháp bảo mật phù hợp để bảo vệ hệ thống.
+---
 
-5. Bonus Flag
-FIT4012{A-Confidentiality-B-Integrity-C-Availability}
+## 2. Mapping CIA
+Ghép từng sự cố với CIA.
+
+- Sự cố A -> Confidentiality (Tính bảo mật - Dữ liệu bị rò rỉ ra ngoài)
+- Sự cố B -> Integrity (Tính toàn vẹn - Dữ liệu bị chỉnh sửa trái phép)
+- Sự cố C -> Availability (Tính khả dụng - Hệ thống bị treo không truy cập được)
+
+---
+
+## 3. Phân tích sự cố B
+- Threat: Kẻ tấn công thực hiện thay đổi điểm số trên hệ thống bằng SQL Injection.
+- Vulnerability: Ứng dụng chưa kiểm tra kỹ dữ liệu đầu vào từ phía người dùng.
+- Mitigation: Sử dụng tham số hóa truy vấn (Parameterized queries) và kiểm tra phân quyền chặt chẽ.
+
+---
+
+## 4. Reflection
+Viết 5-7 dòng.
+
+Qua bài lab này, em đã nắm vững kiến thức về mô hình bảo mật CIA và cách áp dụng vào thực tế. Em hiểu rằng việc xác định đúng tài sản (Assets) là bước đầu tiên và quan trọng nhất trong quản trị rủi ro. Việc phân tích các mối đe dọa giúp em có cái nhìn đa chiều về các lỗ hổng bảo mật tiềm ẩn. Từ đó, em có thể đề xuất các biện pháp giảm thiểu rủi ro phù hợp để bảo vệ hệ thống. Bài học này rất hữu ích cho lộ trình học tập về an toàn thông tin của em.
+
+---
+
+## 5. Bonus Flag
+`FIT4012{A-?-B-?-C-?}`
+
+Flag của em: FIT4012{A-CONF-B-INTE-C-AVAI}
