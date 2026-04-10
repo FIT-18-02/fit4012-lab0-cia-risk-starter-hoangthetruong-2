@@ -41,6 +41,4 @@ Qua bài lab này, em đã nắm vững kiến thức về mô hình bảo mật
 ---
 
 ## 5. Bonus Flag
-`FIT4012{A-?-B-?-C-?}`
-
-Flag của em: FIT4012{A-CONF-B-INTE-C-AVAI}
+Flag của em: FIT4012{A-Confidentiality-B-Integrity-C-Availability}
